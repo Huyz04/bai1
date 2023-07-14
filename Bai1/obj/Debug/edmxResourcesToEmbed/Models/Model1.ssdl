@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TEST1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="namee" Type="varchar" MaxLength="90" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="28" Nullable="false" />
+    <Property Name="brand" Type="varchar" MaxLength="28" />
+    <Property Name="typee" Type="varchar" MaxLength="21" />
+    <Property Name="descriptionn" Type="varchar" MaxLength="180" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="updated_at" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="TEST1ModelStoreContainer">
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
